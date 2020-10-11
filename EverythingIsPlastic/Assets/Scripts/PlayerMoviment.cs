@@ -47,6 +47,8 @@ public class PlayerMoviment : MonoBehaviour
         }
        
         PlayerTransform.position += new Vector3(PlayerMovH, 0, PlayerMovV) * Time.deltaTime * speed;
+               
+
         if (Input.GetButtonDown("Jump") && Mathf.Abs(PlayerRB.velocity.y) < 0.001f)
         {
             PlayerRB.AddForce(new Vector2(0, jump), ForceMode.Impulse);
